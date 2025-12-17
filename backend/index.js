@@ -35,7 +35,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swaggerDoc))
+// app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swaggerDoc))
 app.use(authRoute)
 app.use(productRoute)
 app.use(cartRoute)

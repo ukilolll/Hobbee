@@ -76,7 +76,7 @@ const Header = () => {
 
         <div className="nav-item">
           <select onChange={handleSelect} defaultValue="">
-            {categories.map(cat => (
+            {categories?.map(cat => (
               <option key={cat.id} value={cat.id}>
                 {cat.name}
               </option>
