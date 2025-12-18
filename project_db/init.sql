@@ -5,12 +5,12 @@ CREATE TABLE users (
     username TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
-    status TEXT NOT NULL
+    status TEXT NOT NULL ,
     profile_image TEXT ,
     birthday date , 
-    phone number TEXT ,
-    first_name TEXT
-    last_name TEXT,
+    phone_number TEXT ,
+    first_name TEXT ,
+    last_name TEXT
 );
 
 -- หมวดหมู่สินค้า
@@ -26,7 +26,7 @@ CREATE TABLE products (
     description TEXT,
     category_id INT REFERENCES categories(id),
     price NUMERIC(12,2) NOT NULL,
-    stock INT NOT NULL DEFAULT 0
+    stock INT NOT NULL DEFAULT 0 ,
     image_name TEXT NOT NULL 
 );
 
@@ -56,5 +56,5 @@ CREATE TABLE order_items (
     id SERIAL PRIMARY KEY,
     order_id INT REFERENCES orders(id),
     product_id INT REFERENCES products(id),
-    quantity INT NOT NULL,
+    quantity INT NOT NULL
 );

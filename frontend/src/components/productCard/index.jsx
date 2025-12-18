@@ -3,7 +3,7 @@ import styles from "./styles"
 import AddCart from "/images/AddCart.png"; 
 
 export default function ProductCard({ ProductData , onClick }) {
-const image_url = `http://localhost:3000/product/image/${ProductData.image_name}`
+const image_url = `/api/product/image/${ProductData.image_name}`
 
   return (
     <div style={styles.card} key={ProductData.id} onClick={onClick}>

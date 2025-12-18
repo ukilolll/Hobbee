@@ -18,8 +18,8 @@ import adminRoute from "./routes/admin.js"
 const app = express()
 const port = process.env.PORT || 8080
 
-const swaggerfile = fs.readFileSync('swagger.yaml','utf-8')
-const swaggerDoc = yaml.parse(swaggerfile)
+// const swaggerfile = fs.readFileSync('swagger.yaml','utf-8')
+// const swaggerDoc = yaml.parse(swaggerfile)
 // กำหนด path ที่จะให้เรียกหน้า Document ขึ้นมา
 
 app.use(cors())
